@@ -1,3 +1,13 @@
 *{
     box-sizing: border-box;
 }
+
+html, body{
+    background: #EC168E;
+    background: -webkit-linear-gradient(left top, #EC168E, #F8EF4E); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #EC168E, #F8EF4E); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #EC168E, #F8EF4E); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #EC168E, #F8EF4E); /* Standard syntax */
+    height: 100%;
+}
+

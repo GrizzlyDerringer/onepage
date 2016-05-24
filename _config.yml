@@ -2,7 +2,6 @@
 title: Grizzly Derringer
 email: hello@grizzlyderringer.com
 description: > # this means to ignore newlines until "baseurl:"
-Grizzly Derringer. Los Angeles California.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://onepage.grizzlyderringer.com" # the base hostname & protocol for your site
 
