@@ -29,6 +29,22 @@ h2{
   margin-bottom: 20px;
 }
 
+.site-header{
+  position: fixed;
+  backdrop-filter: blur(8px);
+  background-color: rgba(darken(#EC168E, 5), 0.5);;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  border-bottom: solid 1px #fff;
+  .site-nav{
+    margin-top: 15px;
+    li{
+      margin: 0 30px;
+    }
+  }
+}
+
 .page-content{
   display: table;
   height: 100%;
@@ -42,9 +58,8 @@ h2{
 }
 
 .playlist{
-  //color: #222;
   backdrop-filter: blur(8px);
-  background-color: rgba(darken(#EC168E, 5), 0.7);;
+  background-color: rgba(#EC168E, 0.1);;
   width: auto;
   border: solid 2px #fff;
   border-radius: 15px;
@@ -60,5 +75,4 @@ h2{
       border-top: none;
     }
   }
-
 }
