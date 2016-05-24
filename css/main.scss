@@ -7,6 +7,7 @@
 
 a, a:visited, a:hover, a:link{
   color: #fff;
+  text-decoration: none;
 }
 
 h1{
@@ -62,15 +63,19 @@ h2{
 
 .playlist{
   backdrop-filter: blur(8px);
-  background-color: rgba(#EC168E, 0.1);;
+  background-color: rgba(#EC168E, 0.1);
   width: auto;
   border: solid 2px #fff;
   border-radius: 15px;
   display: inline-block;
   min-width: 300px;
+  overflow: hidden;
   .table{
     text-align: left;
     margin-bottom: 0;
+    thead{
+      color: #F8EF4E;
+    }
     &>tbody>tr>td{
       border-top-width: 2px;
     }

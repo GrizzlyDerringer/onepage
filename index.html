@@ -1,18 +1,25 @@
 ---
 layout: default
 ---
-
 <h1>Grizzly Derringer</h1>
 <h2>American<br>Dream</h2>
 <div class="playlist">
     <table class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Time</th>
+            <th></th>
+        </tr>
+        </thead>
         <tbody>
         {% for song in site.data.playlist.songs %}
         <tr>
             <td>{{ forloop.index }}.</td>
             <td>{{ song.title }}</td>
             <td>{{ song.duration }}</td>
-            <td><a href="#" class="glyphicon glyphicon-play"></a></td>
+            <td><a href="{{ song.url }}" target="_blank" class="glyphicon glyphicon-play"></a></td>
         </tr>
         {% endfor %}
         </tbody>
