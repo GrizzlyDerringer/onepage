@@ -2,13 +2,16 @@
 layout: default
 ---
 
-
+<h1>Grizzly Derringer</h1>
+<h2>American<br>Dream</h2>
 <div class="playlist">
     <table class="table">
         <tbody>
         {% for song in site.data.playlist.songs %}
         <tr>
-            <td><a href="#">{{ song.title }}</a></td>
+            <td>{{ forloop.index }}.</td>
+            <td>{{ song.title }}</td>
+            <td>{{ song.duration }}</td>
             <td><a href="#" class="glyphicon glyphicon-play"></a></td>
         </tr>
         {% endfor %}
