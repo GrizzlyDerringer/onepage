@@ -1,0 +1,12 @@
+{
+  "album_title" : "American Dream",
+  "artist" : "Grizzly Derringer",
+  "songs" : [
+    { "title" : "Tax and the Man"},
+    { "title" : "Sometimes"},
+    { "title" : "Tick Tick Tock"},
+    { "title" : "Red West"},
+    { "title" : "El Camino"},
+    { "title" : "American Dream"}
+  ]
+}

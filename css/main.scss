@@ -3,5 +3,26 @@
 ---
 @charset "utf-8";
 
-@import "reset";
 @import "layout";
+
+a, a:visited, a:hover, a:link{
+  color: #fff;
+}
+
+.page-content{
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.playlist{
+  width: auto;
+  display: inline-block;
+  text-align: left;
+}

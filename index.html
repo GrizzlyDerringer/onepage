@@ -2,6 +2,13 @@
 layout: default
 ---
 
-<div class="home">
 
-</div>
+<table class="table playlist">
+    <tbody>
+    {% for song in site.data.playlist.songs %}
+    <tr>
+        <td><a href="#">{{ song.title }}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
