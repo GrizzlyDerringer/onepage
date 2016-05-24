@@ -23,6 +23,19 @@ a, a:visited, a:hover, a:link{
 
 .playlist{
   width: auto;
+  border: solid 2px #fff;
+  border-radius: 15px;
   display: inline-block;
-  text-align: left;
+  min-width: 300px;
+  .table{
+    text-align: left;
+    margin-bottom: 0;
+    &>tbody>tr>td{
+      border-top-width: 2px;
+    }
+    &>tbody>tr:first-child>td{
+      border-top: none;
+    }
+  }
+
 }
