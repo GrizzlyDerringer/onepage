@@ -1,0 +1,32 @@
+$progress-bar-height: 35px;
+.jp-audio{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  &.is-playing{
+    display: block;
+  }
+}
+
+.jp-progress{
+  height: $progress-bar-height;
+  background-color: rgba($pink, 0.3);
+}
+
+.jp-play-bar{
+  background: linear-gradient(to left, darken($pink, 7), $blue);
+  height: $progress-bar-height;
+}
+
+.jp-current-time{
+  position: absolute;
+  left: 5px;
+  bottom: 7px;
+}
+
+.jp-duration{
+  position: absolute;
+  right: 5px;
+  bottom: 7px;
+}

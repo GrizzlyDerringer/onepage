@@ -33,6 +33,7 @@
             $this.removeClass('glyphicon-pause')
                  .addClass('glyphicon-play');
             setBindings();
+            $('.jp-audio').removeClass('is-playing');
         }
 
         function onEnded() {
@@ -58,6 +59,7 @@
             $jplayer.jPlayer('setMedia', {
                 mp3: href
             }).jPlayer('play');
+            $('.jp-audio').addClass('is-playing');
         }
     });
 </script>
