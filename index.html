@@ -15,7 +15,7 @@ layout: default
         </thead>
         <tbody>
         {% for song in site.data.playlist.songs %}
-        <tr>
+        <tr class="playlist-row">
             <td>{{ forloop.index }}.</td>
             <td>{{ song.title }}</td>
             <td>{{ song.duration }}</td>

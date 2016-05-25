@@ -13,7 +13,22 @@
 
         setBindings();
 
+        function onTrackRowClick(e){
+            e.preventDefault();
+            var $this = $(this),
+                $playbutton = $this.find('.song-control'),
+                href = $playbutton.attr('href');
+            playTrack(href);
+            $('.song-control')
+                    .removeClass('glyphicon-pause')
+                    .addClass('glyphicon-play');
+            $playbutton.removeClass('glyphicon-play');
+            $playbutton.addClass('glyphicon-pause');
+            setBindings();
+        }
+
         function onPlayButtonClick(e) {
+            e.stopPropagation();
             e.preventDefault();
             var $this = $(this),
                 href = $this.attr('href');
@@ -27,6 +42,7 @@
         }
 
         function onPauseButtonClick(e) {
+            e.stopPropagation();
             e.preventDefault();
             var $this = $(this);
             $jplayer.jPlayer('pause');
@@ -53,6 +69,7 @@
         function setBindings () {
             $('.glyphicon-pause').off().on('click', onPauseButtonClick);
             $('.glyphicon-play').off().on('click', onPlayButtonClick);
+            $('.playlist-row').off().on('click', onTrackRowClick);
         }
 
         function playTrack(href) {
