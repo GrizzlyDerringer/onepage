@@ -14,7 +14,8 @@ html, body{
     animation: AnimationName 30s ease infinite;
     height: 100%;
     color: #fff;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 body{
