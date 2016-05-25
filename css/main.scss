@@ -3,6 +3,7 @@
 ---
 @charset "utf-8";
 @import "variables";
+@import "breakpoints";
 @import "layout";
 @import "player";
 
@@ -43,7 +44,10 @@ h2{
   .site-nav{
     margin-top: 15px;
     li{
-      margin: 0 30px;
+      margin: 0 15px;
+      @include breakpoint(sm){
+        margin: 0 30px;
+      }
       a{
         color: $yellow;
       }
