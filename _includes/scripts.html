@@ -60,6 +60,18 @@
                 mp3: href
             }).jPlayer('play');
             $('.jp-audio').addClass('is-playing');
+            trackEvent('playbackStart', href);
+        }
+
+        function trackEvent(action, label){
+            if(window.ga){
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'songs',
+                    eventAction: action,
+                    eventLabel: label
+                });
+            }
         }
     });
 </script>
