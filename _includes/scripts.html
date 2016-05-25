@@ -1,15 +1,63 @@
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
-        $(".player").jPlayer({
-            ready: function () {
-                $(this).jPlayer("setMedia", {
-                    mp3: "https://s3-us-west-1.amazonaws.com/grizzlyderringer/Red_West.mp3"
-                });
-            },
-            supplied: "mp3"
-        });
+    $(function () {
+        'use strict';
+        var $jplayer = $('.player').jPlayer({
+                supplied: 'mp3',
+                ended: onEnded
+            });
+
+        setBindings();
+
+        function onPlayButtonClick(e) {
+            e.preventDefault();
+            var $this = $(this),
+                href = $this.attr('href');
+            playTrack(href);
+            $('.song-control')
+                    .removeClass('glyphicon-pause')
+                    .addClass('glyphicon-play');
+            $this.removeClass('glyphicon-play');
+            $this.addClass('glyphicon-pause');
+            setBindings();
+        }
+
+        function onPauseButtonClick(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $jplayer.jPlayer('pause');
+            $this.removeClass('glyphicon-pause')
+                 .addClass('glyphicon-play');
+            setBindings();
+        }
+
+        function onEnded() {
+            var $next_track = $('.glyphicon-pause').closest('tr').next('tr').find('.glyphicon-play');
+            $('.song-control')
+                    .removeClass('glyphicon-pause')
+                    .addClass('glyphicon-play');
+            if($next_track) {
+                var href = $next_track.attr('href');
+                playTrack(href);
+                $next_track.removeClass('glyphicon-play');
+                $next_track.addClass('glyphicon-pause');
+            }
+            setBindings();
+        }
+
+        function setBindings () {
+            $('.glyphicon-pause').off().on('click', onPauseButtonClick);
+            $('.glyphicon-play').off().on('click', onPlayButtonClick);
+        }
+
+        function playTrack(href) {
+            $jplayer.jPlayer('setMedia', {
+                mp3: href
+            }).jPlayer('play');
+        }
     });
 </script>

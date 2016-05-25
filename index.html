@@ -19,14 +19,12 @@ layout: default
             <td>{{ forloop.index }}.</td>
             <td>{{ song.title }}</td>
             <td>{{ song.duration }}</td>
-            <td><a href="{{ song.url }}" target="_blank" class="glyphicon glyphicon-play"></a></td>
+            <td>
+                <a href="{{ song.url }}" target="_blank" class="glyphicon glyphicon-play song-control"></a>
+            </td>
         </tr>
         {% endfor %}
         </tbody>
     </table>
 </div>
 <div class="player"></div>
-<div id="jp_container_1">
-    <a href="#" class="jp-play">Play</a>
-    <a href="#" class="jp-pause">Pause</a>
-</div>
