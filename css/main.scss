@@ -2,8 +2,9 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-
+@import "variables";
 @import "layout";
+@import "player";
 
 a, a:visited, a:hover, a:link{
   color: #fff;
@@ -11,7 +12,7 @@ a, a:visited, a:hover, a:link{
 }
 
 h1{
-  color: #F8EF4E;
+  color: $yellow;
   font-family: 'Ultra', serif;
   font-size: 19px;
   margin: 0;
@@ -34,17 +35,17 @@ h2{
   position: fixed;
   top: 0;
   backdrop-filter: blur(8px);
-  background-color: rgba(darken(#EC168E, 5), 0.5);;
+  background-color: rgba(darken($pink, 5), 0.5);;
   height: 50px;
   width: 100%;
   text-align: center;
-  border-bottom: solid 1px #F8EF4E;
+  border-bottom: solid 1px $yellow;
   .site-nav{
     margin-top: 15px;
     li{
       margin: 0 30px;
       a{
-        color: #F8EF4E;
+        color: $yellow;
       }
     }
   }
@@ -64,7 +65,7 @@ h2{
 
 .playlist{
   backdrop-filter: blur(8px);
-  background-color: rgba(#EC168E, 0.1);
+  background-color: rgba($pink, 0.1);
   width: auto;
   border: solid 2px #fff;
   border-radius: 15px;
@@ -75,7 +76,7 @@ h2{
     text-align: left;
     margin-bottom: 0;
     thead{
-      color: #F8EF4E;
+      color: $yellow;
     }
     &>tbody>tr>td{
       border-top-width: 2px;
