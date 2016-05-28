@@ -67,15 +67,18 @@
         }
 
         function onEnded() {
-            var $next_track = $('.glyphicon-pause').closest('tr').next('tr').find('.glyphicon-play');
+            var $next_tr = $('.glyphicon-pause').closest('tr').next('tr'),
+                $next_playbutton = $next_tr.find('.glyphicon-play');
+            $('.playlist-row').removeClass('playing');
+            $next_tr.addClass('playing');
             $('.song-control')
                     .removeClass('glyphicon-pause')
                     .addClass('glyphicon-play');
-            if($next_track) {
-                var href = $next_track.attr('href');
+            if($next_playbutton) {
+                var href = $next_playbutton.attr('href');
                 playTrack(href);
-                $next_track.removeClass('glyphicon-play');
-                $next_track.addClass('glyphicon-pause');
+                $next_playbutton.removeClass('glyphicon-play');
+                $next_playbutton.addClass('glyphicon-pause');
             }
             setBindings();
         }
