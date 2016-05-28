@@ -8,7 +8,7 @@ html, body{
     background: -o-linear-gradient(bottom right,  $pink, $pink, $pink, $yellow, $yellow, $yellow); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right,  $pink, $pink, $pink, $yellow, $yellow, $yellow); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right,  $pink, $pink, $pink, $yellow, $yellow, $yellow); /* Standard syntax */
-    background-size: 300% 300%;
+    background-size: 400% 400%;
     -webkit-animation: AnimationName 30s linear infinite;
     -moz-animation: AnimationName 30s linear infinite;
     animation: AnimationName 30s linear infinite;
@@ -16,6 +16,9 @@ html, body{
     color: #fff;
     overflow-y: auto;
     overflow-x: hidden;
+    @include breakpoint(md){
+        background-size: 200% 200%;
+    }
 }
 
 body{
