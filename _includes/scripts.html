@@ -18,13 +18,24 @@
             var $this = $(this),
                 $playbutton = $this.find('.song-control'),
                 href = $playbutton.attr('href');
-            playTrack(href);
-            $('.song-control')
-                    .removeClass('glyphicon-pause')
-                    .addClass('glyphicon-play');
-            $playbutton.removeClass('glyphicon-play');
-            $playbutton.addClass('glyphicon-pause');
-            setBindings();
+            if($this.hasClass('playing')){
+                $jplayer.jPlayer('pause');
+                $('.playlist-row').removeClass('playing');
+                $playbutton.removeClass('glyphicon-pause')
+                            .addClass('glyphicon-play');
+                setBindings();
+                $('.jp-audio').removeClass('is-playing');
+            }else{
+                playTrack(href);
+                $('.playlist-row').removeClass('playing');
+                $this.addClass('playing');
+                $('.song-control')
+                        .removeClass('glyphicon-pause')
+                        .addClass('glyphicon-play');
+                $playbutton.removeClass('glyphicon-play');
+                $playbutton.addClass('glyphicon-pause');
+                setBindings();
+            }
         }
 
         function onPlayButtonClick(e) {
@@ -33,6 +44,8 @@
             var $this = $(this),
                 href = $this.attr('href');
             playTrack(href);
+            $('.playlist-row').removeClass('playing')
+            $this.closest('tr').addClass('playing');
             $('.song-control')
                     .removeClass('glyphicon-pause')
                     .addClass('glyphicon-play');
@@ -46,6 +59,7 @@
             e.preventDefault();
             var $this = $(this);
             $jplayer.jPlayer('pause');
+            $('.playlist-row').removeClass('playing');
             $this.removeClass('glyphicon-pause')
                  .addClass('glyphicon-play');
             setBindings();
