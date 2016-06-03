@@ -9,73 +9,23 @@
 @import "player";
 
 a, a:visited, a:hover, a:link{
-  color: #fff;
   text-decoration: none;
-}
-
-h1{
-  color: $yellow;
-  font-family: 'Knockout-92UltmtCruiserwt', 'Georgia', serif;
-  font-size: 28px;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  text-align: right;
-  width: 300px;
-  top: 7px;
-}
-
-h2{
-  font-size: 54px;
-  margin: 0 auto 20px;
-  padding: 0;
-  font-family: 'Vow', 'Roboto', 'Helvetica Neue', sans-serif;
-  line-height: 50px;
-  width: 300px;
-  text-align: right;
-  position: relative;
-  &:before{
-    display:none;
-    content: ' ';
-    width: 400px;
-    height: 550px;
-    background: transparent url("/assets/img/girl1.png") no-repeat center center;
-    background-size: contain;
-    position: absolute;
-    top: -93px;
-    left: -395px;
-    @include breakpoint(md){
-      display: block;
-    }
-    @include breakpoint(lg){
-      //height: 800px;
-      //width: 600px;
-      //left: -576px;
-    }
-  }
-  span{
-    font-size: 120%;
-  }
 }
 
 .site-header{
   position: fixed;
   top: 0;
   backdrop-filter: blur(8px);
-  background-color: rgba(darken($pink, 5), 0.5);;
   height: 50px;
   width: 100%;
   text-align: center;
-  border-bottom: solid 1px $yellow;
+  border-bottom: solid 1px;
   .site-nav{
     margin-top: 15px;
     li{
       margin: 0 15px;
       @include breakpoint(sm){
         margin: 0 30px;
-      }
-      a{
-        color: $yellow;
       }
     }
   }
@@ -96,9 +46,8 @@ h2{
 
 .playlist{
   backdrop-filter: blur(8px);
-  background-color: rgba($pink, 0.1);
   width: auto;
-  border: solid 2px #fff;
+  border: solid 2px;
   border-radius: 15px;
   display: inline-block;
   min-width: 300px;
@@ -109,21 +58,101 @@ h2{
     text-align: left;
     margin-bottom: 0;
     overflow: hidden;
-    thead{
-      color: $yellow;
-    }
+
     &>tbody>tr>td{
       border-top-width: 2px;
     }
     &>tbody>tr:first-child>td{
       border-top: none;
     }
-    &>tbody>tr.playing{
-      background-color: $yellow;
-      color: $pink;
-      .glyphicon{
-        color: $pink;
+  }
+}
+
+.layout-onepage-american-dream{
+  h1{
+    color: $yellow;
+    font-family: 'Knockout-92UltmtCruiserwt', 'Georgia', serif;
+    font-size: 28px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: right;
+    width: 300px;
+    top: 7px;
+  }
+
+  h2{
+    font-size: 54px;
+    margin: 0 auto 20px;
+    padding: 0;
+    font-family: 'Vow', 'Roboto', 'Helvetica Neue', sans-serif;
+    line-height: 50px;
+    width: 300px;
+    text-align: right;
+    position: relative;
+    &:before{
+      display:none;
+      content: ' ';
+      width: 400px;
+      height: 550px;
+      background: transparent url("/assets/img/girl1.png") no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      top: -93px;
+      left: -395px;
+      @include breakpoint(md){
+        display: block;
       }
+      @include breakpoint(lg){
+        //height: 800px;
+        //width: 600px;
+        //left: -576px;
+      }
+    }
+    span{
+      font-size: 120%;
+    }
+  }
+
+  a, a:visited, a:hover, a:link{
+    color: #fff;
+  }
+
+  .site-header{
+    background-color: rgba(darken($pink, 5), 0.5);
+    border-color: $yellow;
+    .site-nav li a{
+      color: $yellow;
+    }
+  }
+
+  .playlist{
+    background-color: rgba($pink, 0.1);
+    border-color: #fff;
+    .table{
+      thead{
+        color: $yellow;
+      }
+      &>tbody>tr.playing{
+        background-color: $yellow;
+        color: $pink;
+        .glyphicon{
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+
+.layout-onepage-grizzly-derringer{
+  h1{
+    color: #8B321C;
+  }
+
+  .site-header{
+    background-color: rgba(#8B321C, 0.5);
+    .site-nav li a {
+      color: #fff;
     }
   }
 }

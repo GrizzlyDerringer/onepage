@@ -11,13 +11,9 @@ $progress-bar-height: 35px;
 
 .jp-progress{
   height: $progress-bar-height;
-  background-color: rgba($pink, 0.3);
 }
 
-.jp-play-bar{
-  background: linear-gradient(to left, darken($pink, 7), $blue);
-  height: $progress-bar-height;
-}
+
 
 .jp-current-time{
   position: absolute;
@@ -29,4 +25,15 @@ $progress-bar-height: 35px;
   position: absolute;
   right: 5px;
   bottom: 7px;
+}
+
+.layout-onepage-american-dream{
+  .jp-play-bar{
+    background: linear-gradient(to left, darken($pink, 7), $blue);
+    height: $progress-bar-height;
+  }
+
+  .jp-progress{
+    background-color: rgba($pink, 0.3);
+  }
 }
