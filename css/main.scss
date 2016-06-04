@@ -146,11 +146,55 @@ a, a:visited, a:hover, a:link{
 
 .layout-onepage-grizzly-derringer{
   h1{
-    color: #8B321C;
+    font-family: "DKInsomniac";
+    font-size: 65px;
+    color: $brown;
+    font-weight: normal;
+    transform: rotate(10deg);
+    position: relative;
+    line-height: 60px;
+    left: 60px;
+    top: 10px;
+    z-index: 2;
+    span{
+      font-size: 110%;
+      display: block;
+      transform: rotate(-5deg);
+    }
+  }
+
+  h2{
+    font-size: 140px;
+    font-family: "DKInsomniac";
+    line-height: 105px;
+    color: rgba(#fff, .35);
+    position: absolute;
+    transform: rotate(-5deg);
+    left: 0px;
+    right: 90px;
+    top: 100px;
+    bottom: 0;
+    span{
+      display: block;
+      position: relative;
+      left: 90px;
+      transform: rotate(10deg);
+    }
+  }
+
+  a, a:visited, a:hover, a:link{
+    color: $orange;
+  }
+
+  .playlist{
+    border-color: $light-brown;
+    .table{
+      color: $light-brown;
+    }
   }
 
   .site-header{
-    background-color: rgba(#8B321C, 0.5);
+    background-color: rgba($orange, 0.5);
     .site-nav li a {
       color: #fff;
     }

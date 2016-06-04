@@ -28,6 +28,9 @@ html,body{
         &.layout-onepage-grizzly-derringer{
             background: transparent url('/assets/img/album_1_background.jpg') no-repeat center center;
             background-size: cover;
+            font-family: "TrashHand";
+            font-size: 18px;
+            color: $brown;
         }
     }    
 }
