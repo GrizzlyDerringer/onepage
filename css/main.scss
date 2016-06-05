@@ -93,36 +93,50 @@ a, a:visited, a:hover, a:link{
   h1{
     color: $yellow;
     font-family: 'Knockout-92UltmtCruiserwt', 'Georgia', serif;
-    font-size: 28px;
-    margin: 0 auto;
+    font-size: 20px;
+    margin: 20px auto 0;
     padding: 0;
     position: relative;
     text-align: right;
     width: 300px;
     top: 7px;
+    @include breakpoint(md){
+      margin: 0 auto;
+      font-size: 41px;
+      width: 431px;
+    }
   }
 
   h2{
-    font-size: 54px;
+    font-size: 39px;
     margin: 0 auto 20px;
     padding: 0;
     font-family: 'Vow', 'Roboto', 'Helvetica Neue', sans-serif;
-    line-height: 50px;
+    line-height: 40px;
     width: 300px;
     text-align: right;
     position: relative;
+    @include breakpoint(md) {
+      font-size: 81px;
+      line-height: 77px;
+      width: 431px;
+      left: 0;
+    }
     &:before{
-      display:none;
+      display: block;
       content: ' ';
-      width: 400px;
-      height: 550px;
       background: transparent url("/assets/img/girl1.png") no-repeat center center;
       background-size: contain;
       position: absolute;
-      top: -93px;
-      left: -395px;
+      width: 96px;
+      height: 138px;
+      left: -8px;
+      top: -36px;
       @include breakpoint(md){
-        display: block;
+        width: 419px;
+        height: 600px;
+        top: -18px;
+        left: -294px;
       }
       @include breakpoint(lg){
         //height: 800px;
@@ -158,6 +172,9 @@ a, a:visited, a:hover, a:link{
   .playlist{
     background-color: rgba($pink, 0.1);
     border-color: #fff;
+    @include breakpoint(md){
+      left: 63px;
+    }
     .table{
       thead{
         color: $yellow;
