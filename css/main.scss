@@ -27,7 +27,27 @@ a, a:visited, a:hover, a:link{
       @include breakpoint(sm){
         margin: 0 30px;
       }
+      position: relative;
+      #collectionsDropdown{
+        display: none;
+        position: absolute;
+        width: 130px;
+        border-left: solid 1px;
+        border-right: solid 1px;
+        border-bottom: solid 1px;
+        padding: 5px 5px 10px;
+        border-radius: 0px 0px 15px 15px;
+        top: 34px;
+        left: -7px;
+        &.open{
+          display: block;
+        }
+        li{
+          margin: 0;
+        }
+      }
     }
+
   }
 }
 
@@ -124,6 +144,14 @@ a, a:visited, a:hover, a:link{
     .site-nav li a{
       color: $yellow;
     }
+    .site-nav li{
+      #collectionsDropdown{
+        background-color: $pink;
+        border-left-color: $yellow;
+        border-bottom-color: $yellow;
+        border-bottom-color: $yellow;
+      }
+    }
   }
 
   .playlist{
@@ -150,7 +178,7 @@ a, a:visited, a:hover, a:link{
     font-size: 65px;
     color: $brown;
     font-weight: normal;
-    transform: rotate(10deg);
+    transform: rotate(15deg);
     position: relative;
     line-height: 60px;
     left: 60px;
@@ -166,7 +194,7 @@ a, a:visited, a:hover, a:link{
   h2{
     font-size: 140px;
     font-family: "DKInsomniac";
-    line-height: 105px;
+    line-height: 115px;
     color: rgba(#fff, .35);
     position: absolute;
     transform: rotate(-5deg);
@@ -178,7 +206,7 @@ a, a:visited, a:hover, a:link{
       display: block;
       position: relative;
       left: 90px;
-      transform: rotate(10deg);
+      transform: rotate(deg);
     }
   }
 
@@ -194,9 +222,15 @@ a, a:visited, a:hover, a:link{
   }
 
   .site-header{
-    background-color: rgba($orange, 0.5);
+    background-color: rgba($orange);
     .site-nav li a {
       color: #fff;
+    }
+
+    .site-nav li{
+      #collectionsDropdown{
+        background-color: rgba($orange);
+      }
     }
   }
 }

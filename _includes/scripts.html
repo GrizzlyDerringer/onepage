@@ -87,6 +87,7 @@
             $('.glyphicon-pause').off().on('click', onPauseButtonClick);
             $('.glyphicon-play').off().on('click', onPlayButtonClick);
             $('.playlist-row').off().on('click', onTrackRowClick);
+            $('#collectionsToggle').off().on('click', onCollectionsToggleClick);
         }
 
         function playTrack(href) {
@@ -106,6 +107,11 @@
                     eventLabel: label
                 });
             }
+        }
+
+        function onCollectionsToggleClick(e){
+            e.preventDefault();
+            $('#collectionsDropdown').toggleClass('open');
         }
     });
 </script>
