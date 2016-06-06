@@ -45,3 +45,30 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'DKInsomniac';
+  src: url('/assets/fonts/dkinsomniac/DKInsomniac.eot');
+  src: url('/assets/fonts/dkinsomniac/DKInsomniac.woff2') format('woff2'),
+  url('/assets/fonts/dkinsomniac/DKInsomniac.woff') format('woff'),
+  url('/assets/fonts/dkinsomniac/DKInsomniac.ttf') format('truetype'),
+  url('/assets/fonts/dkinsomniac/DKInsomniac.svg#DKInsomniac') format('svg'),
+  url('/assets/fonts/dkinsomniac/DKInsomniac.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TrashHand';
+  src: url('/assets/fonts/trashhand/TrashHand.eot');
+  src: url('/assets/fonts/trashhand/TrashHand.woff2') format('woff2'),
+  url('/assets/fonts/trashhand/TrashHand.woff') format('woff'),
+  url('/assets/fonts/trashhand/TrashHand.ttf') format('truetype'),
+  url('/assets/fonts/trashhand/TrashHand.svg#TrashHand') format('svg'),
+  url('/assets/fonts/trashhand/TrashHand.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+

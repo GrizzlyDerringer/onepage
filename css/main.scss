@@ -213,13 +213,31 @@ a, a:visited, a:hover, a:link{
     font-size: 140px;
     font-family: "DKInsomniac";
     line-height: 115px;
-    color: rgba(#fff, .35);
+    color: rgba(255, 255, 255, 0.35);
     position: absolute;
     transform: rotate(-5deg);
     left: 0px;
     right: 90px;
     top: 100px;
     bottom: 0;
+    width: 526px;
+    margin: auto;
+    &:before{
+      display: none;
+      content: ' ';
+      //display: block;
+      background: transparent url("/assets/img/GD_bearhead.png") no-repeat 0 0;
+      background-size: contain;
+      position: absolute;
+      transform: rotate(5deg);
+      opacity: .9;
+      @include breakpoint(md){
+        width: 500px;
+        height: 500px;
+        left: -149px;
+        top: 4px;
+      }
+    }
     span{
       display: block;
       position: relative;
@@ -234,8 +252,9 @@ a, a:visited, a:hover, a:link{
 
   .playlist{
     border-color: $light-brown;
+    background-color: rgba(#FDDAAD, .8);
     .table{
-      color: $light-brown;
+      color: $dark-brown;
     }
   }
 
