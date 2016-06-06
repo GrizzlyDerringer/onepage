@@ -280,14 +280,14 @@ a, a:visited, a:hover, a:link{
   }
 
   .site-header{
-    background-color: rgba($orange, 0.5);
+    background-color: rgba($orange, 1.0);
     .site-nav li a {
       color: #fff;
     }
 
     .site-nav li{
       #collectionsDropdown{
-        background-color: rgba($orange, 0.5);
+        background-color: rgba($orange, 1.0);
       }
     }
   }
