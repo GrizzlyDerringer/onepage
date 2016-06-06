@@ -8,7 +8,8 @@ body.layout-onepage{
 }    
 
 html,body{
-    height: 100%;    
+    height: 100%;
+    width: 100%;
     &.layout-onepage{
         overflow-y: auto;
         overflow-x: hidden;        
@@ -26,8 +27,9 @@ html,body{
         }
 
         &.layout-onepage-grizzly-derringer{
+            overflow-x: hidden;
             background: transparent url('/assets/img/album_1_background.jpg') no-repeat center center;
-            background-size: cover;
+            background-size: 100% 100%;
             font-family: "TrashHand";
             font-size: 18px;
             color: $brown;

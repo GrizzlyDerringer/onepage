@@ -4,17 +4,15 @@
   {% include head.html %}
 
   <body class="layout-onepage layout-onepage-grizzly-derringer">
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div id="main">
+      {% include header.html %}
+      <div class="page-content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
       </div>
+      {% include scripts.html %}
     </div>
-
-    {% include scripts.html %}
-
   </body>
 
 </html>
