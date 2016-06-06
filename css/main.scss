@@ -207,12 +207,8 @@ a, a:visited, a:hover, a:link{
     left: 60px;
     top: 0px;
     z-index: 2;
-    display: inline-block;
     width: 300px;
     margin: auto;
-    @include breakpoint(sm){
-      display: block;
-    }
     span{
       font-size: 110%;
       display: block;
