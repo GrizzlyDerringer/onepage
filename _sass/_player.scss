@@ -17,13 +17,13 @@ $progress-bar-height: 35px;
 
 .jp-current-time{
   position: absolute;
-  left: 5px;
+  left: 10px;
   bottom: 7px;
 }
 
 .jp-duration{
   position: absolute;
-  right: 5px;
+  right: 10px;
   bottom: 7px;
 }
 
@@ -44,7 +44,10 @@ $progress-bar-height: 35px;
     height: $progress-bar-height;
   }
 
+  .jp-current-time, .jp-duration{
+    color: $tan;
+  }
   .jp-progress{
-    background-color: rgba($brown, 0.3);
+    background-color: rgba($brown, 0.8);
   }
 }
