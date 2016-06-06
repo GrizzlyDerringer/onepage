@@ -255,6 +255,13 @@ a, a:visited, a:hover, a:link{
     background-color: rgba(#FDDAAD, .8);
     .table{
       color: $dark-brown;
+      &>tbody>tr.playing{
+        background-color: $orange;
+        color: $tan;
+        .glyphicon{
+          color: $tan;
+        }
+      }
     }
   }
 
