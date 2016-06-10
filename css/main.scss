@@ -29,6 +29,16 @@ a, a:visited, a:hover, a:link{
         margin: 0 30px;
       }
       position: relative;
+      &.social-link{
+        position: relative;
+        a{
+          position: absolute;
+          font-size: 32px;
+          top: -32px;
+          left: 0;
+          right: 0;
+        }
+      }
       #collectionsDropdown{
         display: none;
         position: absolute;
